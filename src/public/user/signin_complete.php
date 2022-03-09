@@ -24,8 +24,8 @@ try {
     if (!$useCaseOutput->isSuccess()) {
         throw new Exception($useCaseOutput->message());
     }
-    redirect("../index.php");
+    redirect('../index.php');
 } catch (Exception $e) {
     $_SESSION['errors'][] = $e->getMessage();
-    redirect("../index.php");
+    redirect('../index.php');
 }

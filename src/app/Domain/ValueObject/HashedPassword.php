@@ -17,7 +17,7 @@ final class HashedPassword
 
     /**
      * コンストラクタ
-     * 
+     *
      * @param string $value
      */
     public function __construct(string $value)
@@ -36,7 +36,7 @@ final class HashedPassword
 
     /**
      * パスワードの照合
-     * 
+     *
      * @param InputPassword $inputPassword
      * @return bool
      */

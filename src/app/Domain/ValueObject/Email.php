@@ -23,34 +23,34 @@ final class Email
 
     /**
      * コンストラクタ
-     * 
+     *
      * @param string $value
      */
     public function __construct(string $value)
     {
-      if ($this->isInvalid($value)) {
-        throw new Exception(self::INVALID_MESSAGE);
-      }
+        if ($this->isInvalid($value)) {
+            throw new Exception(self::INVALID_MESSAGE);
+        }
 
-      $this->value = $value;
+        $this->value = $value;
     }
 
     /**
-      * @return string
+     * @return string
      */
     public function value(): string
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
      * メールアドレスのバリデーション
-     * 
+     *
      * @param string $value
      * @return boolean
      */
     private function isInvalid(string $value): bool
     {
-      return !preg_match(self::EMAIL_REGULAR_EXPRESSIONS, $value);
+        return !preg_match(self::EMAIL_REGULAR_EXPRESSIONS, $value);
     }
 }
